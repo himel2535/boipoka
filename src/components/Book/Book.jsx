@@ -1,12 +1,11 @@
 import React from "react";
-import { FaStarHalfAlt } from "react-icons/fa";
+// import { FaStarHalfAlt } from "react-icons/fa";
 import { Link } from "react-router";
 
 const Book = ({ singleBook }) => {
   //   console.log(singleBook);
   const {
     bookName,
-    author,
     bookId,
     image,
     publisher,
@@ -24,8 +23,8 @@ const Book = ({ singleBook }) => {
         </figure>
         <div className="card-body">
           <div className="flex justify-center gap-7">
-            {tags.map((tag) => (
-              <button>{tag}</button>
+            {tags.map((tag,index) => (
+              <button key={index}>{tag}</button>
             ))}
           </div>
           <h2 className="card-title">
@@ -38,7 +37,7 @@ const Book = ({ singleBook }) => {
             <div className="badge badge-outline">{category}</div>
             <div className="badge badge-outline">
               {rating}
-              <FaStarHalfAlt />
+              {/* <FaStarHalfAlt /> */}
             </div>
           </div>
         </div>
