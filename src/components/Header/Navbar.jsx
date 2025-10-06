@@ -8,7 +8,9 @@ const Navbar = () => {
         <li className="m-2">Home</li>
       </Link>
       <li className="m-2">Listed Books</li>
-      <li className="m-2">Pages to Read</li>
+      <Link to='/readList'>
+        <li className="m-2">Pages to Read</li>
+      </Link>
     </>
   );
 
